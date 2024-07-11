@@ -17,14 +17,14 @@ Route::get('/user', function (Request $request) {
 
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
-
+Route::post('/refresh', [AuthController::class, 'refresh']);
 
 
 
 Route::group(['middleware' => 'auth:api', 'prefix' => 'auth'], function ($router) {
 
     Route::post('/me', [AuthController::class, 'me']);
-    Route::post('/refresh', [AuthController::class, 'refresh']);
+    
     Route::post('/logout', [AuthController::class, 'logout']);
 
     Route::apiResource('/brand', BrandCarController::class);

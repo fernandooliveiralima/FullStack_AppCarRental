@@ -43,11 +43,15 @@ class BrandCarController extends Controller
 
         if ($request->has('single_attributes')) {
             $single_attributes = $request->single_attributes;
-            $brandsCar = $brandsCar->selectRaw($single_attributes)->get();
+            $brandsCar = $brandsCar->selectRaw($single_attributes);
         } else {
-            $brandsCar = $brandsCar->get();
+            $brandsCar = $brandsCar;
         }
-        
+
+        // Adicionando paginação
+        $perPage = $request->input('per_page', 3);
+        $brandsCar = $brandsCar->paginate($perPage);
+
         return response()->json($brandsCar, 200);
     }
 
@@ -113,20 +117,19 @@ class BrandCarController extends Controller
             $request->validate($brandId->rules(), $brandId->feedback());
         }
 
-        /* remove o arquivo antigo, caso um novo tenha sido enviado no request */
-        if ($request->brand_image) {
-            Storage::disk('public')->delete($brandId->brand_image);
-        }
-
-        $imageElement = $request->brand_image;
-        $image_urn = $imageElement->store('images', 'public');
-
-        /* preencher o objeto marca com o payload do request */
         $brandId->fill($request->all());
-        $brandId->brand_image = $image_urn;
-        $brandId->save();
 
-        return response()->json($brandId, 200);
+        if($request->brand_image){
+            //remove o arquivo antigo, caso um novo tenha sido enviado no request
+            Storage::disk('public')->delete($brandId->brand_image);
+
+            $imageElement = $request->brand_image;
+            $image_urn = $imageElement->store('images', 'public');
+            $brandId->brand_image = $image_urn;
+            
+        }
+        $brandId->save();
+       return response()->json($brandId, 200);
     }
 
     /**
