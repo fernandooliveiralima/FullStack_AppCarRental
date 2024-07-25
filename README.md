@@ -1,66 +1,171 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## FullStack App Car Rental
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+![maintenance-status](https://img.shields.io/badge/maintenance-actively--developed-brightgreen.svg)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Description Of Project
+     What does the application do?
+    App Car Rental, is a fullstack application that is a car rental company, where you can enter records of car models and their brands. 
+     
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Technologies Applied in the Project
+     
+### DataBase
+![maintenance-status](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Authentication
+![maintenance-status](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)
 
-## Learning Laravel
+### BackEnd
+![maintenance-status](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## FrontEnd
+![maintenance-status](https://img.shields.io/badge/Vue%20js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Installation Instructions
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Pre Requirements
+## Composer
+## NodeJs
 
-## Laravel Sponsors
+### Steps for Project Execution
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Step 1 - Clone the project Run the code below
+```bash
+git clone https://github.com/fernandooliveiralima/FullStack_AppCarRental.git 
+```
+### Step 2 - Access the project folder Run the code below
+```bash
+cd FullStack_AppCarRental 
+```
 
-### Premium Partners
+### Step 3 - Install the project's BackEnd Dependencies Run the code below
+```bash
+composer install
+```
+### Step 4 - Rename the file `.env.example` to `.env` Run the code below
+```bash
+cp .env.example .env
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### Step 6 - Configure the `.env` file Copy the code below
+```bash
+APP_NAME=Laravel
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+APP_TIMEZONE=UTC
+APP_URL=http://localhost
 
-## Contributing
+APP_LOCALE=en
+APP_FALLBACK_LOCALE=en
+APP_FAKER_LOCALE=en_US
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+APP_MAINTENANCE_DRIVER=file
+APP_MAINTENANCE_STORE=database
 
-## Code of Conduct
+BCRYPT_ROUNDS=12
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+LOG_CHANNEL=stack
+LOG_STACK=single
+LOG_DEPRECATIONS_CHANNEL=null
+LOG_LEVEL=debug
 
-## Security Vulnerabilities
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=appcar_rental
+DB_USERNAME=root
+DB_PASSWORD=
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+SESSION_DRIVER=database
+SESSION_LIFETIME=120
+SESSION_ENCRYPT=false
+SESSION_PATH=/
+SESSION_DOMAIN=null
 
-## License
+BROADCAST_CONNECTION=log
+FILESYSTEM_DISK=local
+QUEUE_CONNECTION=database
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+CACHE_STORE=database
+CACHE_PREFIX=
+
+MEMCACHED_HOST=127.0.0.1
+
+REDIS_CLIENT=phpredis
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+
+MAIL_MAILER=log
+MAIL_HOST=127.0.0.1
+MAIL_PORT=2525
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="hello@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
+
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_DEFAULT_REGION=us-east-1
+AWS_BUCKET=
+AWS_USE_PATH_STYLE_ENDPOINT=false
+
+VITE_APP_NAME="${APP_NAME}"
+
+```
+
+### Step 7 - Create the Database: `appcar_rental` `Suggestion: Use MySQL Workbench`
+
+## Important: The `DB_PASSWORD` field cannot be empty, enter your MySQL Workbench password. 
+
+### In MySQL Workbench Run the Code Below
+```bash
+1. create database appcar_rental;
+2. use appcar_rental;
+```
+
+### Step 8 - Run Project Migrations Run the code below
+```bash
+php artisan migrate
+```
+
+### Step 9 - Generate the Application Key Run the code below
+```bash
+php artisan key:generate
+```
+
+### Step 10 - Generate the Application Storage Link Run the code below
+```bash
+php artisan storage:link
+```
+### Step 11 - Generate the Application Authentication JWT Secret Key Run the code below
+```bash
+php artisan jwt:secret
+```
+
+### Step 12 - Install the Application's NodeJs Dependencies Run the code below
+```bash
+npm install
+```
+
+### Step 13 - Open Two Parallel Terminals:
+### In Terminal 1 Run The Code Below
+```bash
+php artisan serve
+```
+
+### In Terminal 2 Run The Code Below
+```bash
+npm run dev
+```
+
+## Application Authentication Instructions
+1. With Both Terminals Running
+2. Create Your Account in the `Register` Tab Fill in All Fields
+3. After creating your account, go to the `Login` tab and enter your email and password to authenticate.
+### Ready Now You Can Enjoy The Application's New Features!
+
+
